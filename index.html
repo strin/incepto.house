@@ -74,17 +74,20 @@
     }
     </script>
     <div class="slider-container">
+        <div class="slider-control left inactive" style="display: none;"></div>
+        <div class="slider-control right" style="display: none;"></div>
         <div class="slider">
             <div class="slide slide-0 active">
                 <!-- <div class="slide__bg" style="background-image: url(img/outdoor1.jpeg);"></div> -->
                 <video class="slide__bg" autoplay playsinline loop style="max-width: 100%; max-height: 100%;">
-                    <source src="/video/backyard.m4v" type="video/mp4">
+                    <source src="/video/topdown.m4v" type="video/mp4">
                 </video>
+
                 <div class="slide__content">
-                    <svg class="slide__overlay" viewBox="0 0 1 1" preserveAspectRatio="xMaxYMax slice">
+                    <svg class="slide__overlay" viewBox="0 0 0.75 1" preserveAspectRatio="xMaxYMax slice">
                         <path class="slide__overlay-path" style="fill: #ffffff" d="M0,0 150,0 500,405 0,405" />
                     </svg>
-                    <div class="slide__text ">
+                    <div class="slide__text" style="left: 10%;">
                         <div class="incepto-heading slide__text-heading">Incepto House</div>
                         <div class="slide__text-heading">
                             <p>A newly formed community housing in Menlo Park</p>
@@ -93,7 +96,9 @@
                 </div>
             </div>
             <div class="slide slide-1">
-                <div class="slide__bg" style="background-image: url(http://oak.elitefingers.com/architecture/wp-content/uploads/2017/01/oak-slide3.jpg);"></div>
+                <video class="slide__bg" autoplay playsinline loop style="max-width: 100%; max-height: 100%;">
+                    <source src="/video/backyard.m4v" type="video/mp4">
+                </video>
                 
                 <div class="slide__content">
                     <svg class="slide__overlay" viewBox="0 0 1 1" preserveAspectRatio="xMaxYMax slice">
@@ -135,7 +140,7 @@
                 </div>
             </div>
             <div class="slide slide-2">
-                <div class="slide__bg" style="background-image: url(http://oak.elitefingers.com/architecture/wp-content/uploads/2017/01/oak-slide2.jpg);"></div>
+                <div class="slide__bg" style="background-image: url(/img/maindoor.jpeg);"></div>
                 <div class="slide__content">
                     <svg class="slide__overlay" viewBox="0 0 1 1" preserveAspectRatio="xMaxYMax slice">
                         <path class="slide__overlay-path" style="fill: #ffffff" d="M0,0 150,0 500,405 0,405" />
