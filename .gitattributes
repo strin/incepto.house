@@ -4,3 +4,5 @@ video/topdown.m4v filter=lfs diff=lfs merge=lfs -text
 video/poster-backyard.png filter=lfs diff=lfs merge=lfs -text
 video/poster-topdown.png filter=lfs diff=lfs merge=lfs -text
 video/backyard.mp4 filter=lfs diff=lfs merge=lfs -text
+video/topdown.m filter=lfs diff=lfs merge=lfs -text
+video/topdown.mp4 filter=lfs diff=lfs merge=lfs -text
