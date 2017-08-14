@@ -50,6 +50,18 @@
             top: 15% !important;
         }
 
+        video { 
+            /*position: fixed !important;*/
+            top: 50% !important;
+            left: 50% !important;
+            min-width: 100% !important;
+            min-height: 100% !important;
+            width: auto !important;
+            height: auto !important;
+            z-index: -100 !important;
+            transform: translateX(-50%) translateY(-50%) !important;
+          transition: 1s opacity !important;
+        }
         </style>
     </head>
 
@@ -79,7 +91,7 @@
         <div class="slider">
             <div class="slide slide-0 active">
                 <!-- <div class="slide__bg" style="background-image: url(img/outdoor1.jpeg);"></div> -->
-                <video class="slide__bg" autoplay playsinline loop style="max-width: 100%; max-height: 100%;">
+                <video class="slide__bg" poster="/video/poster-topdown.png" autoplay playsinline loop muted>
                     <source src="/video/topdown.m4v" type="video/mp4">
                 </video>
 
@@ -96,7 +108,7 @@
                 </div>
             </div>
             <div class="slide slide-1">
-                <video class="slide__bg" autoplay playsinline loop style="max-width: 100%; max-height: 100%;">
+                <video class="slide__bg" poster="/video/poster-backyard.png" autoplay playsinline loop muted style="max-width: 100%; max-height: 100%;">
                     <source src="/video/backyard.m4v" type="video/mp4">
                 </video>
                 
