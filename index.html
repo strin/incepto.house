@@ -317,17 +317,17 @@
     <script>
     var lastSlideDate = Date.now();
     var blockSlideDuration = 2000; // block control for this amount of time after each slide.
-    // window.onwheel = function(e) {
-    //     if (Date.now() - lastSlideDate < blockSlideDuration) return;
-    //     console.log(e.deltaY);
-    //     if (e.deltaY <= 0) {
-    //         document.querySelector('.slider-control.left').click();
-    //         lastSlideDate = Date.now();
-    //     } else {
-    //         document.querySelector('.slider-control.right').click();
-    //         lastSlideDate = Date.now();
-    //     }
-    // }
+    window.onwheel = function(e) {
+        if (Date.now() - lastSlideDate < blockSlideDuration) return;
+        console.log(e.deltaY);
+        if (e.deltaY <= 0) {
+            document.querySelector('.slider-control.left').click();
+            lastSlideDate = Date.now();
+        } else {
+            document.querySelector('.slider-control.right').click();
+            lastSlideDate = Date.now();
+        }
+    }
     </script>
     <div class="slider-container">
         <div class="slider-control left inactive" style="display: none;"></div>
@@ -419,62 +419,62 @@
                         </div>
                     </div>
                 </div>
-                <div class="slide slide-3">
-                    <video class="slide__bg" poster="/video/poster-topdown.png" autoplay muted playsinline loop>
-                        <source src="/video/topdown.mp4" type="video/mp4">
-                    </video>
-                    <div class="slide__content">
-                        <svg class="slide__overlay" viewBox="0 0 1 1" preserveAspectRatio="xMaxYMax slice">
-                            <path class="slide__overlay-path" style="fill: #ffffff" d="M0,0 150,0 500,405 0,405" />
-                        </svg>
-                        <div class="slide__text incepto-text">
-                            <div class="slide__text-heading incepto-heading">Join the Community</div>
-                            <div class="slide__text-heading incepto-heading-2">
-                                Mailing List
-                                <!-- Begin MailChimp Signup Form -->
-                                <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-                                <style type="text/css">
-                                #mc_embed_signup {
-                                    background: #fff;
-                                    clear: left;
-                                    font: 14px Helvetica, Arial, sans-serif;
-                                    width: 100%;
-                                }
-                                /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-                                   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-                                </style>
-                                <div id="mc_embed_signup" style="background: none;">
-                                    <form action="//xyz.us1.list-manage.com/subscribe/post?u=dfe1971430cfa22545ae7ba85&amp;id=6df13dd28b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                                        <div id="mc_embed_signup_scroll">
-                                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" style="width: 70%; float: left;" required>
-                                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                                                <input type="text" name="b_dfe1971430cfa22545ae7ba85_6df13dd28b" tabindex="-1" value="">
-                                            </div>
-                                            <div class="clear" style="width: 25%;">
-                                                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-                                            </div>
+            </div>
+            <div class="slide slide-3">
+                <video class="slide__bg" poster="/video/poster-topdown.png" autoplay muted playsinline loop>
+                    <source src="/video/topdown.mp4" type="video/mp4">
+                </video>
+                <div class="slide__content">
+                    <svg class="slide__overlay" viewBox="0 0 1 1" preserveAspectRatio="xMaxYMax slice">
+                        <path class="slide__overlay-path" style="fill: #ffffff" d="M0,0 150,0 500,405 0,405" />
+                    </svg>
+                    <div class="slide__text incepto-text">
+                        <div class="slide__text-heading incepto-heading">Join the Community</div>
+                        <div class="slide__text-heading incepto-heading-2">
+                            Mailing List
+                            <!-- Begin MailChimp Signup Form -->
+                            <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+                            <style type="text/css">
+                            #mc_embed_signup {
+                                background: #fff;
+                                clear: left;
+                                font: 14px Helvetica, Arial, sans-serif;
+                                width: 100%;
+                            }
+                            /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                               We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                            </style>
+                            <div id="mc_embed_signup" style="background: none;">
+                                <form action="//xyz.us1.list-manage.com/subscribe/post?u=dfe1971430cfa22545ae7ba85&amp;id=6df13dd28b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                    <div id="mc_embed_signup_scroll">
+                                        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" style="width: 70%; float: left;" required>
+                                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                            <input type="text" name="b_dfe1971430cfa22545ae7ba85_6df13dd28b" tabindex="-1" value="">
                                         </div>
-                                    </form>
-                                </div>
-                                <!--End mc_embed_signup-->
-                                <br/>
+                                        <div class="clear" style="width: 25%;">
+                                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="slide__text-heading incepto-heading-2">
-                                Apply for Housing
-                                <p class="incepto-body">
-                                    <a href="https://goo.gl/forms/umvWIxdiW5mGIdt93" style="text-decoration: underline; font-weight: 200;">Google Form</a>
-                                </p>
-                                <br/>
+                            <!--End mc_embed_signup-->
+                            <br/>
+                        </div>
+                        <div class="slide__text-heading incepto-heading-2">
+                            Apply for Housing
+                            <p class="incepto-body">
+                                <a href="https://goo.gl/forms/umvWIxdiW5mGIdt93" style="text-decoration: underline; font-weight: 200;">Google Form</a>
+                            </p>
+                            <br/>
+                        </div>
+                        <div class="slide__text-heading incepto-heading-2">
+                            Contact Us
+                            <div class="incepto-email incepto-body">
+                                Tim Shi: tianlins AT stanford.edu
                             </div>
-                            <div class="slide__text-heading incepto-heading-2">
-                                Contact Us
-                                <div class="incepto-email incepto-body">
-                                    Tim Shi: tianlins AT stanford.edu
-                                </div>
-                                <div class="incepto-email incepto-body">
-                                    Karen Yang: kaiyuany03 AT gmail.com
-                                </div>
+                            <div class="incepto-email incepto-body">
+                                Karen Yang: kaiyuany03 AT gmail.com
                             </div>
                         </div>
                     </div>
