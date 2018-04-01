@@ -84,7 +84,7 @@
 
     .profile {
         margin-left: auto;
-        z-index: 9999;
+        z-index: 100;
         margin-right: auto;
         text-align: center;
         -webkit-transition: cubic-bezier(.34, .43, 0, 1.02) 0.5s;
@@ -115,7 +115,7 @@
     .profile-image {
         background-size: cover;
         background-position: center;
-        z-index: 9999;
+        z-index: 100;
         position: relative;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
@@ -136,6 +136,7 @@
         background: #e74c3c;
         width: 300px;
         opacity: 0;
+        z-index: 0;
         font-family: 'Helvetica Neue', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
         font-weight: 700;
         text-decoration: none;
@@ -397,15 +398,18 @@
                     <div class="slide__text incepto-text">
                         <div class="slide__text-heading incepto-heading">Meet the Residents</div>
                         <div class="slide__text-heading incepto-heading-2" style="position: relative; font-size: 20px !important;">
-                            <div class="profile" style="position: absolute; top: 0px; left: 0px;">
+                            <a href="https://www.timshi.ai/">
+                                <div class="profile" style="position: absolute; top: 0px; left: 0px;">
                                 <div class="profile-image" style="background-image: url('/img/timshi.jpeg');" data-popup="pop-up-tim">
                                     <div class="overlay">
                                         <span><img /></span>
                                     </div>
                                 </div>
                                 Tim Shi
-                                <div id="pop-up-tim" class="pop-up">AI Researcher. Building Moxel.ai. Previously at OpenAI creating agents that automate the web. Co-founder of Stanford AI+ Club. Excited and worried about AGI. Embraces challenges and curious about new things. Loves badminton, rock climbing, sushi and cats.</div>
-                            </div>
+                                <div id="pop-up-tim" class="pop-up">Currently, I am working on Cresta, an enterprise AI company that augments human to do less repetitive work.
+Previously, I was a PhD student at Stanford AI lab with Percy Liang, building natural language interface to computers. I worked at OpenAI on World of Bits.
+                                </div>
+                            </a>
 
                             <div class="profile" style="position: absolute; top: 0px; left: 120px;">
                                 <div class="profile-image" style="background-image: url('/img/karen-yang.jpeg');" data-popup="pop-up-karen">
@@ -416,6 +420,39 @@
                                 Karen Yang
                                 <div id="pop-up-karen" class="pop-up">Grow up in Shanghai and studied EE and Political Science at Stanford. Loves VR, Robotics, Sci-fi, swimming, martial arts and watching sunset. Favors changes and adventures, especially when it about (healthy) food, travel, future Tech, and learning about new culture.</div>
                             </div>
+
+                            <div class="profile" style="position: absolute; top: 0px; left: 240px;">
+                                <div class="profile-image" style="background-image: url('https://media.licdn.com/dms/image/C4D03AQEfhnGcfLmACg/profile-displayphoto-shrink_800_800/0?e=1527724800&v=alpha&t=Asv4Mt5caf38VLWJrjb4F-eIa4JpQfTmklDbmQanOSA');" data-popup="pop-up-irving">
+                                    <div class="overlay">
+                                        <span><img /></span>
+                                    </div>
+                                </div>
+                                Irving Hsu
+                            </div>
+
+                            <div class="profile" style="position: absolute; top: 150px; left: 0px;">
+                                <div class="profile-image" style="background-image: url('https://media.licdn.com/dms/image/C5603AQFtmjTItSBxTg/profile-displayphoto-shrink_800_800/0?e=1527728400&v=alpha&t=5UmcpLWzYG-TuQ_tKFoXAtbeW9-bcI34x2enZMbRvsI');" data-popup="pop-up-jacob">
+                                    <div class="overlay">
+                                        <span><img /></span>
+                                    </div>
+                                </div>
+                                Jacob Cole
+                                <div id="pop-up-jacob" class="pop-up">
+                                    Jacob is what you would get if you crossed a knowledge-graph-obsessed semantic Web startup founder with a kitten. He loves keeping lists of ideas, introducing intellectual soulmates, and tai chi. He is frequently asked: why are you doing old grandma exercises?
+                                </div>
+                            </div>
+
+                            <div class="profile" style="position: absolute; top: 150px; left: 120px;">
+                                <div class="profile-image" style="background-image: url('https://media.licdn.com/dms/image/C4D03AQE2ojJ9fQ7elw/profile-displayphoto-shrink_800_800/0?e=1527728400&v=alpha&t=sG3UPjsydggCRHH0H5lFf5NwEft7B376HZ00taVFR9Y');" data-popup="pop-up-andrej">
+                                    <div class="overlay">
+                                        <span><img /></span>
+                                    </div>
+                                </div>
+                                Andrej Karpathy
+                                
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
@@ -500,9 +537,11 @@
                 console.log(popUp.css('opacity'));
                 if(popUp.css('opacity') == '0') {
                     popUp.css('opacity', '1');
+                    popUp.css('z-index', '999999');
                     popUp.css('margin-top', '20px');
                 }else{
                     popUp.css('opacity', '0');
+                    popUp.css('z-index', '0');
                     popUp.css('margin-top', '0px');
                 }
             }
